@@ -20,12 +20,12 @@
                     "Target": "Exit"
                 },
                 {
-                    "Text": "Go to Right Tunnel",
-                    "Target": "Right Tunnel"
-                },
-                {
                     "Text": "Go to Left Tunnel",
                     "Target": "Left Tunnel"
+                },
+                {
+                    "Text": "Go to Right Tunnel",
+                    "Target": "Right Tunnel"
                 }
             ]
         },

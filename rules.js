@@ -24,6 +24,8 @@ class Location extends Scene {
                 this.engine.addChoice(choice.Text, choice); // TODO: use the Text of the choice
                 // TODO: add a useful second argument to addChoice so that the current code of handleChoice below works
             }
+        } else {
+            this.engine.addChoice("The end.");
         }
     }
 
