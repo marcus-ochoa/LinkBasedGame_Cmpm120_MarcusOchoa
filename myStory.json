@@ -1,58 +1,170 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "Cave",
+    "Credits": "Created by Marcus Ochoa using StoryGraphTool by Adam Smith",
+    "InitialLocation": "Intro",
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
+        "Intro": {
+            "Body": "While hiking, you have fallen into a cave. The way you fell in is now filled with rubble. Find your way out.",
             "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Porter"
+                    "Text": "Look Around",
+                    "Target": "Entrance"
                 }
             ]
         },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
+        "Entrance": {
+            "Body": "This is where you fell in. The only way out is a gate in front of you. There are tunnels to your left and right.",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Kresge"
+                    "Text": "Try Exit",
+                    "Target": "Exit"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
-                }
-            ]
-        },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Porter"
+                    "Text": "Go to Right Tunnel",
+                    "Target": "Right Tunnel"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Oakes"
+                    "Text": "Go to Left Tunnel",
+                    "Target": "Left Tunnel"
                 }
             ]
         },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
+        "Exit": {
+            "Body": "The gate is locked.",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
+                    "Text": "Back to Entrance",
+                    "Target": "Entrance"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Beyond"
+                    "Text": "Open Lock",
+                    "Target": "Outside",
+                    "Lock": "Locked"
                 }
             ]
         },
-        "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+        "Left Tunnel": {
+            "Body": "There are three rooms here. One with shelves, one with lots of rubble, and one so dark you cannot see.",
+            "Choices": [
+                {
+                    "Text": "Check out shelved room",
+                    "Target": "Pantry"
+                },
+                {
+                    "Text": "Check out rubble",
+                    "Target": "Rubble"
+                },
+                {
+                    "Text": "Check out dark room",
+                    "Target": "Dark Room"
+                },
+                {
+                    "Text": "Back to Entrance",
+                    "Target": "Entrance"
+                }
+            ]
+        },
+        "Right Tunnel": {
+            "Body": "There are three rooms here. One with tools, one with beds, and with a desk.",
+            "Choices": [
+                {
+                    "Text": "Check out tools room",
+                    "Target": "Supply Room"
+                },
+                {
+                    "Text": "Check out room with beds",
+                    "Target": "Medical Room"
+                },
+                {
+                    "Text": "Check out room with desk",
+                    "Target": "Office Room"
+                },
+                {
+                    "Text": "Back to Entrance",
+                    "Target": "Entrance"
+                }
+            ]
+        },
+        "Rubble": {
+            "Body": "The tunnel here looks like it stretches downwards into some kind of mine, but a large cave in had blocked it.",
+            "Choices": [
+                {
+                    "Text": "Back to tunnel",
+                    "Target": "Left Tunnel"
+                }
+            ]
+        },
+        "Dark Room": {
+            "Body": "You can't see anything. Suddenly, eyes open in the dark and a small flurry of bats fly past.",
+            "Choices": [
+                {
+                    "Text": "Back to tunnel",
+                    "Target": "Left Tunnel"
+                }
+            ]
+        },
+        "Pantry": {
+            "Body": "There are shelves with cans and bags of food. This must be some kind of pantry.",
+            "Choices": [
+                {
+                    "Text": "Back to tunnel",
+                    "Target": "Left Tunnel"
+                }
+            ]
+        },
+        "Medical Room": {
+            "Body": "The room is filled not with beds, but cots for treating patients. There are medical supplies strewn on carts.",
+            "Choices": [
+                {
+                    "Text": "Back to tunnel",
+                    "Target": "Right Tunnel"
+                }
+            ]
+        },
+        "Office Room": {
+            "Body": "There is a desk and shelves with documents and knick-knacks. A file cabinet drawer lies open.",
+            "Choices": [
+                {
+                    "Text": "Look through the files",
+                    "Target": "File Cabinet"
+                },
+                {
+                    "Text": "Back to tunnel",
+                    "Target": "Right Tunnel"
+                }
+            ]
+        },
+        "Supply Room": {
+            "Body": "There is rope, pickaxes, and other tools stored here. Some of the tools have rusted over.",
+            "Choices": [
+                {
+                    "Text": "Back to tunnel",
+                    "Target": "Right Tunnel"
+                }
+            ]
+        },
+        "Outside": {
+            "Body": "You made it out."
         }
+    },
+    "Files": {
+        "File 1": {
+            "Body": "The first document lists supplies and numbers corresponding to rations.",
+            "Next": "File 2"
+        },
+        "File 2": {
+            "Body": "The next document is a list of names, along with what might be ages and identification numbers.",
+            "Next": "File 3"
+        },
+        "File 3": {
+            "Body": "The third document is a report outlining some incident involving misfired explosives.",
+            "Next": "File 4"
+        },
+        "File 4": {
+            "Body": "Lastly there is a folder, empty except for a key. (key acquired)",
+            "Next": "Close Drawer",
+            "Key": "Key"
+        }
+
     }
 }
